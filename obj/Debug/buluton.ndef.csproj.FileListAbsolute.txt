@@ -1,0 +1,6 @@
+C:\_project\digital-card-windows-service\buluton.ndef\bin\Debug\buluton.ndef.dll
+C:\_project\digital-card-windows-service\buluton.ndef\bin\Debug\buluton.ndef.pdb
+C:\_project\digital-card-windows-service\buluton.ndef\obj\Debug\buluton.ndef.csproj.AssemblyReference.cache
+C:\_project\digital-card-windows-service\buluton.ndef\obj\Debug\buluton.ndef.csproj.CoreCompileInputs.cache
+C:\_project\digital-card-windows-service\buluton.ndef\obj\Debug\buluton.ndef.dll
+C:\_project\digital-card-windows-service\buluton.ndef\obj\Debug\buluton.ndef.pdb
