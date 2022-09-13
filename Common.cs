@@ -1,4 +1,4 @@
-﻿using System.Threading;
+using System.Threading;
 
 namespace buluton.ndef
 {
@@ -226,5 +226,300 @@ namespace buluton.ndef
             }
         }
 
+        public static UriPrefix UriPrefixStringForUrl(string url)
+        {
+            if (url.StartsWith("http://www."))
+            {
+                return UriPrefix.HttpWww;
+            }
+            else if (url.StartsWith("https://www."))
+            {
+                return UriPrefix.HttpsWww;
+            }
+            else if (url.StartsWith("http://"))
+            {
+                return UriPrefix.Http;
+            }
+            else if (url.StartsWith("https://"))
+            {
+                return UriPrefix.Https;
+            }
+            else if (url.StartsWith("tel:"))
+            {
+                return UriPrefix.Tel;
+            }
+            else if (url.StartsWith("mailto:"))
+            {
+                return UriPrefix.MailTo;
+            }
+            else if (url.StartsWith("ftp://anonymous:anonymous@"))
+            {
+                return UriPrefix.FtpAnonymous;
+            }
+            else if (url.StartsWith("ftp://ftp."))
+            {
+                return UriPrefix.FtpFtp;
+            }
+            else if (url.StartsWith("ftps://"))
+            {
+                return UriPrefix.Ftps;
+            }
+            else if (url.StartsWith("sftp://"))
+            {
+                return UriPrefix.Sftp;
+            }
+            else if (url.StartsWith("smb://"))
+            {
+                return UriPrefix.Smb;
+            }
+            else if (url.StartsWith("nfs://"))
+            {
+                return UriPrefix.Nfs;
+            }
+            else if (url.StartsWith("ftp://"))
+            {
+                return UriPrefix.Ftp;
+            }
+            else if (url.StartsWith("dav://"))
+            {
+                return UriPrefix.Dav;
+            }
+            else if (url.StartsWith("news:"))
+            {
+                return UriPrefix.News;
+            }
+            else if (url.StartsWith("telnet://"))
+            {
+                return UriPrefix.Telnet;
+            }
+            else if (url.StartsWith("imap:"))
+            {
+                return UriPrefix.Imap;
+            }
+            else if (url.StartsWith("rtsp://"))
+            {
+                return UriPrefix.Rtsp;
+            }
+            else if (url.StartsWith("urn:"))
+            {
+                return UriPrefix.Urn;
+            }
+            else if (url.StartsWith("pop:"))
+            {
+                return UriPrefix.Pop;
+            }
+            else if (url.StartsWith("sip:"))
+            {
+                return UriPrefix.Sip;
+            }
+            else if (url.StartsWith("sips:"))
+            {
+                return UriPrefix.Sips;
+            }
+            else if (url.StartsWith("tftp:"))
+            {
+                return UriPrefix.Tftp;
+            }
+            else if (url.StartsWith("btspp://"))
+            {
+                return UriPrefix.Btspp;
+            }
+            else if (url.StartsWith("btl2cap://"))
+            {
+                return UriPrefix.Btl2cap;
+            }
+            else if (url.StartsWith("btgoep://"))
+            {
+                return UriPrefix.Btgoep;
+            }
+            else if (url.StartsWith("tcpobex://"))
+            {
+                return UriPrefix.Tcpobex;
+            }
+            else if (url.StartsWith("irdaobex://"))
+            {
+                return UriPrefix.Irdaobex;
+            }
+            else if (url.StartsWith("file://"))
+            {
+                return UriPrefix.File;
+            }
+            else if (url.StartsWith("urn:epc:id:"))
+            {
+                return UriPrefix.UrnEpcId;
+            }
+            else if (url.StartsWith("urn:epc:tag:"))
+            {
+                return UriPrefix.UrnEpcTag;
+            }
+            else if (url.StartsWith("urn:epc:pat:"))
+            {
+                return UriPrefix.UrnEpcPat;
+            }
+            else if (url.StartsWith("urn:epc:raw:"))
+            {
+                return UriPrefix.UrnEpcRaw;
+            }
+            else if (url.StartsWith("urn:epc:"))
+            {
+                return UriPrefix.UrnEpc;
+            }
+            else if (url.StartsWith("urn:nfc:"))
+            {
+                return UriPrefix.UrnNfc;
+            }
+            else
+            {
+                return UriPrefix.Null;
+            }
+        }
+
+        public static string UriPrefixClearForUrl(string url)
+        {
+            if (url.StartsWith("http://www."))
+            {
+                return url.Replace("http://www.", "");
+            }
+            else if (url.StartsWith("https://www."))
+            {
+                return url.Replace("https://www.", "");
+            }
+            else if (url.StartsWith("http://"))
+            {
+                return url.Replace("http://", "");
+            }
+            else if (url.StartsWith("https://"))
+            {
+                return url.Replace("https://", "");
+            }
+            else if (url.StartsWith("tel:"))
+            {
+                return url.Replace("tel:", "");
+            }
+            else if (url.StartsWith("mailto:"))
+            {
+                return url.Replace("mailto:", "");
+            }
+            else if (url.StartsWith("ftp://anonymous:anonymous@"))
+            {
+                return url.Replace("ftp://anonymous:anonymous@", "");
+            }
+            else if (url.StartsWith("ftp://ftp."))
+            {
+                return url.Replace("ftp://ftp.", "");
+            }
+            else if (url.StartsWith("ftps://"))
+            {
+                return url.Replace("ftps://", "");
+            }
+            else if (url.StartsWith("sftp://"))
+            {
+                return url.Replace("sftp://", "");
+            }
+            else if (url.StartsWith("smb://"))
+            {
+                return url.Replace("smb://", "");
+            }
+            else if (url.StartsWith("nfs://"))
+            {
+                return url.Replace("nfs://", "");
+            }
+            else if (url.StartsWith("ftp://"))
+            {
+                return url.Replace("ftp://", "");
+            }
+            else if (url.StartsWith("dav://"))
+            {
+                return url.Replace("dav://", "");
+            }
+            else if (url.StartsWith("news:"))
+            {
+                return url.Replace("news:", "");
+            }
+            else if (url.StartsWith("telnet://"))
+            {
+                return url.Replace("telnet://", "");
+            }
+            else if (url.StartsWith("imap:"))
+            {
+                return url.Replace("imap:", "");
+            }
+            else if (url.StartsWith("rtsp://"))
+            {
+                return url.Replace("rtsp://", "");
+            }
+            else if (url.StartsWith("urn:"))
+            {
+                return url.Replace("urn:", "");
+            }
+            else if (url.StartsWith("pop:"))
+            {
+                return url.Replace("pop:", "");
+            }
+            else if (url.StartsWith("sip:"))
+            {
+                return url.Replace("sip:", "");
+            }
+            else if (url.StartsWith("sips:"))
+            {
+                return url.Replace("sips:", "");
+            }
+            else if (url.StartsWith("tftp:"))
+            {
+                return url.Replace("tftp:", "");
+            }
+            else if (url.StartsWith("btspp://"))
+            {
+                return url.Replace("btspp://", "");
+            }
+            else if (url.StartsWith("btl2cap://"))
+            {
+                return url.Replace("btl2cap://", "");
+            }
+            else if (url.StartsWith("btgoep://"))
+            {
+                return url.Replace("btgoep://", "");
+            }
+            else if (url.StartsWith("tcpobex://"))
+            {
+                return url.Replace("tcpobex://", "");
+            }
+            else if (url.StartsWith("irdaobex://"))
+            {
+                return url.Replace("irdaobex://", "");
+            }
+            else if (url.StartsWith("file://"))
+            {
+                return url.Replace("file://", "");
+            }
+            else if (url.StartsWith("urn:epc:id:"))
+            {
+                return url.Replace("urn:epc:id:", "");
+            }
+            else if (url.StartsWith("urn:epc:tag:"))
+            {
+                return url.Replace("urn:epc:tag:", "");
+            }
+            else if (url.StartsWith("urn:epc:pat:"))
+            {
+                return url.Replace("urn:epc:pat:", "");
+            }
+            else if (url.StartsWith("urn:epc:raw:"))
+            {
+                return url.Replace("urn:epc:raw:", "");
+            }
+            else if (url.StartsWith("urn:epc:"))
+            {
+                return url.Replace("urn:epc:", "");
+            }
+            else if (url.StartsWith("urn:nfc:"))
+            {
+                return url.Replace("urn:nfc:", "");
+            }
+            else
+            {
+                return url;
+            }
+        }
     }
 }
